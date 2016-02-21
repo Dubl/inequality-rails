@@ -1,0 +1,427 @@
+/*
+	General styles
+*/
+
+
+
+
+body {
+	
+font-family: "Source Sans Pro", Arial, sans-serif;
+	
+background-color: #93dd00;
+	
+font-size: 13px;
+	
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+body, html {
+	
+height: 100%
+
+}
+
+
+
+h1, h2, h3, h4 {
+	font-family: "Helvetica";
+}
+
+h1 {	
+	font-size: 30px;
+}
+
+h2 {
+	
+font-size: 20px;
+
+}
+
+a, a:visited {
+	
+text-decoration: none;
+	
+color: #ccc;
+
+}
+
+a:hover {
+
+	text-decoration: underline;
+
+}
+
+.touchonly {
+	display: none;
+}
+html.touch .touchonly {
+	display: block;
+}
+.noselect * {
+	user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+}
+.doselect * {
+	user-select: auto;
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-o-user-select: auto;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+/* Styles for index.html as stysle from example.css are used or they are identified as needed
+they are moved over here */
+
+/* containters */
+
+#content-wrapper, #example-wrapper {
+	height: 100%;
+}
+
+		/* need to keep titlechart visable */
+#example-wrapper.horizontal {
+	white-space: nowrap;
+	font-size: 0;  /* fix for spaces between inline block divs */
+}
+
+#example-wrapper .scrollContent {
+	height: 100%;
+}
+
+
+/* Header Navigation */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #005c5c;
+}
+
+nav li {
+    float: right;
+}
+
+nav li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+		/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+nav a:visited {	
+	text-decoration: none;	
+	color: #fff;
+}
+
+/* titlechart */
+
+section#titlechart {
+	text-align: center;
+	position: relative;
+	height: 100%;
+	min-height: 500px;
+	min-width: 100%;
+	height: 100vh;
+}
+
+section#titlechart #description {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: -150px auto auto -300px;
+}
+
+section#titlechart img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+
+/* sections */
+.green {
+
+	background-image: url(image_path("white_triangle.png"));
+	background-color: #93dd00;
+}
+
+.panel .green h1{
+
+	font-size: 50px;
+}
+
+
+section.growth {
+	text-align: center;
+	position: relative;
+	height: 1370px;
+	max-width: 100%;
+	background-image: url(image_path('USeconomy2.png'));
+	background-repeat: no-repeat;
+}
+
+section.darkgreen {
+	text-align: center;
+	position: relative;
+	max-width: 100%;
+	background-color: #008e8e;
+	margin-bottom: -20px;
+	padding: 10% 5% 10% 5%;
+}
+
+section.pink {
+	text-align: center;
+	position: relative;
+	max-width: 100%;
+	background-color: #e11e8c;
+	margin-bottom: -20px;
+	padding: 10% 5% 5% 5%;
+}
+
+section.pink h2{ 
+	color:#fff; 
+	font-size:10em;
+}
+
+@media only screen and (min-width: 320px) {
+
+	section.pink h2 { 
+		font-size:5em;
+	}
+
+}
+
+@media only screen and (min-width: 700px) {
+
+	section.pink h2 { 
+		font-size:8em;
+	}
+}
+
+section.whitescroll {
+	text-align: center;
+	position: relative;
+	max-width: 100%;
+	background-color: #fff;
+	margin-bottom: -40px;
+	padding: 10% 5% 10% 5%;
+
+}
+
+section.whitescroll h1{
+	font-family: 'Dorsa', sans-serif;
+	color: #93dd00 !important;
+	font-size: 18em !important;
+}
+
+section.pink img {
+margin-top: -300px;
+}
+
+section.demo * {
+	font-size: 13px;
+}
+
+section.demo h1 {
+	font-size: 50px;
+	color: #003f3f;
+}
+section.demo {
+	font-size: 0;
+	text-align: center;
+}
+
+.grow {
+	background-color: #fff;
+	margin-top: -40px;
+	}
+
+.grow b {
+	text-align: left;
+	color:#93dd00;
+}
+
+.white {
+	background-color: #fff;
+}
+
+
+.petition {
+	background-color: #fff;
+	margin-top: -60px;
+}
+
+.petition h2 {
+	color: #464646;
+	padding: 10%;
+	font-size: 5em;
+	font-family: 'helvetica';
+}
+
+@media only screen and (min-width: 320px) {
+
+	.petition  h2 { 
+		font-size:2em;
+	}
+
+}
+
+@media only screen and (min-width: 700px) {
+
+	.petition  h2 { 
+		font-size:3em;
+	}
+}
+
+.transparent {
+	background-color: none;
+	margin-top: -400px;
+}
+
+.turqoise {
+	background-color: #008e8e;
+	padding: 10% 5% 5% 5%;
+}
+
+.turqoise h1{
+	color: #fff !important;
+} 
+
+.green2 {
+	background-color: #93dd00;
+	padding: 10% 5% 10% 5%;
+		text-align: center;
+	position: relative;
+	max-width: 100%;
+
+}
+
+section.green2 h2{
+	padding: 0 20% 0 20%;
+	color: #333;
+	font-style: regular;
+	
+} 
+
+.green3 {
+	background-color: #93dd00;
+	padding: 10% 5% 12000px 5%;
+	margin-bottom: 12000px;
+		text-align: center;
+	position: relative;
+	max-width: 100%;
+	background-image: url("../img/mobg.png");
+}
+.green4 {
+	padding: 0 0 1000px 0;
+	position: relative;
+	max-width: 100%;
+	background-image: url("../img/transition.png");
+}
+
+.pink2 {
+	background-color: #e11e8c;
+	padding: 10% 5% 5% 5%;
+}
+
+.pink2 h1{
+	
+} 
+
+input[type="text"] {
+  padding: 10px;
+  border: solid 5px #008e8e;
+  transition: border 1s;
+  font-size: 2em;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border: solid 5px #fff;
+}
+
+.button {
+    background-color: #008e8e;
+    border: none;
+    color: #fff !important;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5%;
+    cursor: pointer;
+}
+
+
+section.demo .grow {
+	text-align: center;
+	font-family: 'Dorsa', sans-serif;
+}
+
+
+/* Resize "GROWN" text for different screen sizes */
+@media only screen and (min-width: 320px) {
+
+   #section-wipes > div:nth-child(5) > section > b { 
+   		font-size: 250pt; 
+   		
+   	}
+
+}
+
+@media only screen and (min-width: 700px) {
+
+   #section-wipes > div:nth-child(5) > section > b { 
+   		font-size: 500pt; 
+}
+}
+
+@media only screen and (min-width: 1000px) {
+
+      #section-wipes > div:nth-child(5) > section > b { 
+   		font-size: 600pt; 
+
+}
+}
+@media only screen and (min-width: 1300px) {
+
+      #section-wipes > div:nth-child(5) > section > b { 
+   		font-size: 700pt;
+
+}
+}
+

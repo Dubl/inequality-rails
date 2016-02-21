@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=500" />
+	<meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, anchor, link, in-page, navigation, hash" />
+	<title>Inequality</title>
+
+	<%= stylesheet_link_tag "application", media: "all" %>
+	<%= javascript_include_tag "application" %>	
+	
+	<!-- for annimating -->
+
+
+	<!-- font -->
+	<link href='https://fonts.googleapis.com/css?family=Dorsa' rel='stylesheet' type='text/css'>
+
+
+
+</head>      
+<body>
+	<!--script type="text/javascript" src="js/plugins/debug.addIndicators.js"></script-->  
+		<section class="demo" id="section-wipes">
+			<style type="text/css">
+				.panel {
+					height: 200%;
+					width: 100%;
+					}
+						
+				.panel.green {
+					/* margin-bottom: 400px*/
+					height: 100%;
+	
+					}
+				.panel.blue {
+					margin-bottom: 400px;
+					height: 100%;
+	
+					}
+			</style>
+
+
+	<nav>
+		<ul>
+		  <li><a href="#calculator">calculator</a></li>
+		</ul>
+	</nav>
+
+	<section class="panel green">
+		<h1>How much</h1>
+		<img src=<%= asset_path "money.png" %> height="185px" width="375px">
+		<h1>does the 1% owe you?</h1>
+		</br>
+		</br>
+		<p>scroll down to find out</p>
+         
+	</section>
+	<section class="growth">
+
+
+
+
+	</section>
+
+
+	
+<section class="panel grow">
+<b>GROWN</b>
+</section>
+
+<section class="darkgreen"> 
+
+<h1 style="color:#fff">At first, as your productivity increased, your income increased.</h1>
+
+</section>
+
+
+<section class="panel white">
+
+				<div class="spacer s0" ></div>
+						<div class="spacer s0" id="boom"></div>
+						<div id="imagesequence">
+
+							<img id="myimg2"><br>
+
+							
+						</div>
+
+						<div class="spacer s2"></div>
+	
+						<script>
+							// define images
+							var images2 = [
+									"<%= asset_path "graph1c.png" %>",
+									"<%= asset_path "graph1b.png" %>",
+									"<%= asset_path "graph1a.png" %>",
+									"<%= asset_path "graph1.png" %>",
+									"<%= asset_path "graph2.png" %>",
+									"<%= asset_path "graph3.png" %>",
+									"<%= asset_path "graph4.png" %>",
+									"<%= asset_path "graph5.png" %>",
+									"<%= asset_path "graph6.png" %>",
+								    "<%= asset_path "graph7.png" %>",
+									"<%= asset_path "graph8.png" %>",
+									"<%= asset_path "graph9.png" %>",
+									"<%= asset_path "graph10.png" %>",
+									"<%= asset_path "graph11.png" %>",
+									"<%= asset_path "graph11.png" %>",
+									"<%= asset_path "graph11.png" %>",
+									"<%= asset_path "graph12.png" %>",
+
+							];
+
+							// TweenMax can tween any property of any object. We use this object to cycle through the array
+							var obj2 = {curImg2: 0};
+
+							// create tween
+							var tween2 = TweenMax.to(obj2, 1.5,
+								{
+									curImg2: images2.length - 1,	// animate propery curImg to number of images
+									roundProps: "curImg2",				// only integers so it can be used as an array index
+									repeat: 0,									// repeat 3 times
+									immediateRender: false,			// load first image automatically
+									ease: Linear.easeNone,			// show every image the same ammount of time
+									onUpdate: function () {
+									  $("#myimg2").attr("src", images2[obj2.curImg2]); // set the image source
+									}
+								}
+							);
+
+							// init controller
+							var controller2 = new ScrollMagic.Controller();
+
+							// build scene
+							var scene2 = new ScrollMagic.Scene({triggerElement: "#boom", duration: 0})
+											.setTween(tween2)
+											.addIndicators() // add indicators (requires plugin)
+											.addTo(controller2);
+
+							// handle form change
+							$("form.move input[name=duration]:radio").change(function () {
+								scene2.duration($(this).val());
+							});
+						</script>
+
+						</br>
+						</br>
+						</br>
+						</br>
+						<p>keep scrolling</p>
+				
+
+</section>
+
+
+
+<section class="panel transparent">
+
+				<div class="spacer s0" ></div>
+						<div class="spacer s0" id="boom3"></div>
+						<div id="imagesequence">
+							<img id="myimg3"/><br>
+							
+						</div>
+
+
+						<div class="spacer s2"></div>
+	
+						<script>
+							// define images
+							var images3 = [
+								"img/graph12b.png",
+								"img/graph13.png",
+								"img/graph14.png",
+								"img/graph15.png",
+								"img/graph16.png",
+								"img/graph17.png",
+								"img/graph18.png",
+								"img/graph19.png",
+
+							];
+
+							// TweenMax can tween any property of any object. We use this object to cycle through the array
+							var obj3 = {curImg3: 0};
+
+							// create tween
+							var tween = TweenMax.to(obj3, 1,
+								{
+									curImg3: images3.length - 1,	// animate propery curImg to number of images
+									roundProps: "curImg3",				// only integers so it can be used as an array index
+									repeat: 0,									// repeat 3 times
+									immediateRender: false,			// load first image automatically
+									ease: Linear.easeNone,			// show every image the same ammount of time
+									onUpdate: function () {
+									  $("#myimg2").attr("src", images3[obj3.curImg3]); // set the image source
+									}
+								}
+							);
+
+							// init controller
+							var controller = new ScrollMagic.Controller();
+
+							// build scene
+							var scene = new ScrollMagic.Scene({triggerElement: "#boom3", duration: 0})
+											.setTween(tween)
+											.addIndicators() // add indicators (requires plugin)
+											.addTo(controller);
+
+							// handle form change
+							$("form.move input[name=duration]:radio").change(function () {
+								scene.duration($(this).val());
+							});
+						</script>
+			
+
+</section>
+
+<section class="panel transparent">
+
+				<div class="spacer s0" ></div>
+						<div class="spacer s0" id="boom2"></div>
+						<div id="imagesequence">
+							<img id="myimg"/><br>
+							
+						</div>
+
+
+						<div class="spacer s2"></div>
+	
+						<script>
+							// define images
+							var images = [
+								"img/graph20.png",
+								"img/graph21.png",
+								"img/graph22.png",
+								"img/graph22.png",
+								"img/graph22.png",
+								"img/graph23.png",
+								"img/graph24.png",
+
+							];
+
+							// TweenMax can tween any property of any object. We use this object to cycle through the array
+							var obj = {curImg: 0};
+
+							// create tween
+							var tween = TweenMax.to(obj, 1,
+								{
+									curImg: images.length - 1,	// animate propery curImg to number of images
+									roundProps: "curImg",				// only integers so it can be used as an array index
+									repeat: 0,									// repeat 3 times
+									immediateRender: false,			// load first image automatically
+									ease: Linear.easeNone,			// show every image the same ammount of time
+									onUpdate: function () {
+									  $("#myimg2").attr("src", images[obj.curImg]); // set the image source
+									}
+								}
+							);
+
+							// init controller
+							var controller = new ScrollMagic.Controller();
+
+							// build scene
+							var scene = new ScrollMagic.Scene({triggerElement: "#boom2", duration: 0})
+											.setTween(tween)
+											.addIndicators() // add indicators (requires plugin)
+											.addTo(controller);
+
+							// handle form change
+							$("form.move input[name=duration]:radio").change(function () {
+								scene.duration($(this).val());
+							});
+						</script>
+			
+
+</section>
+
+<section class="pink"> 
+<img src="img/fatcat.png" height="300px" width="300px">
+
+<h1 style="color:#fff">Into the pockets of the 1%</h1>
+
+</section>
+
+<section class="whitescroll"> 
+
+<h1>So What?</h1>
+
+</section>
+
+
+<section class="panel turqoise">
+	<h1>What does this mean for you?</h1>
+	<img src="img/stickYou.png" height="300px" width="150px">
+	
+
+</section>
+
+<section class="green2" id="calculator">
+<h1 >To find out...</h1>
+	<h1>Enter your net wealth:</h1>
+
+     	   <input id="firstbutton" class="input" type="text" name="q" id="field" placeholder="$5,000" autofocus>
+	<h2>The assets of your household (stocks, savings, retirement, house) 
+minus your liabilities (student loans, credit card debt, mortgage). 
+A rough guess is fine.</h2>
+	<h1>Enter your income:</h1>
+
+     	   <input id="secondbutton" class="input" type="text" name="q" id="field" placeholder="$30,000" autofocus>
+	<h2>How much money does your household make in a year before taxes? Include the incomes of everyone in the house who works. A rough guess is fine.</h2>
+
+	<a href="#firstfield_name" class="button">Claculate</a>
+
+</section>
+
+<section class="green4">
+
+</section>
+
+
+	<script>
+
+		$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 3000, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+
+Number.prototype.formatMoney = function(c, d, t){
+var n = this, 
+    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+    d = d == undefined ? "." : d, 
+    t = t == undefined ? "," : t, 
+    s = n < 0 ? "-" : "", 
+    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", 
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };
+
+	$(document).ready("#firstbutton").keyup(function(e){
+	e.preventDefault();
+	var x = Number($("#firstbutton.input").val());     
+	console.log(x);
+	y=(x+114483.11).formatMoney(0);
+	$("#firstfield_name").text("$"+y);
+
+	});
+
+	$(document).ready("#secondbutton").keyup(function(e){
+	e.preventDefault();
+	var x = Number($("#secondbutton.input").val());     
+	console.log(x);
+	y=(x+11552.16).formatMoney(0);
+	$("#secondfield_name").text("$"+y);
+	$("#yo").text("The 1% owe you $"+y);
+	});
+
+
+	</script>
+
+
+<section class="panel pink2">
+	<h1 style="color:#fff">your wealth should be:</h1> 
+	  <h1 id="firstfield_name" style="color:#333"></h1>
+
+<h1 style="color:#fff">your income should be:</h1>
+
+	  <h1 id="secondfield_name" style="color:#333"></h1>
+
+	  <p style="color:#fff">keep scrolling</p> 
+</section>
+
+<section class="darkgreen"> 
+
+<h1 style="color:#fff">The 1% owe you:</h1>
+<h1 style="color:#93dd00; font-size:5em;">$144,483.11!!!<h1>
+</section>
+
+<section class="panel petition">
+	<h2>Get your money back!</h2> 
+	<h3>Sign this e-petition to the presidential candidates:</h3>
+</section>
+
+</section>
+					<script>
+						$(function () { // wait for document ready
+							// init
+							var controller = new ScrollMagic.Controller({
+								globalSceneOptions: {
+									triggerHook: 'onLeave'
+								}
+							});
+
+							// get all slides
+							var slides = document.querySelectorAll("section.panel");
+
+							// create scene for every slide
+							for (var i=0; i<slides.length; i++) {
+								new ScrollMagic.Scene({
+										triggerElement: slides[i]
+									})
+									.setPin(slides[i])
+									.addIndicators() // add indicators (requires plugin)
+									.addTo(controller);
+							}
+						});
+					</script>
+
+	<script type="text/javascript" src="js/tracking.js"></script>
+
+</body>
+</html>
