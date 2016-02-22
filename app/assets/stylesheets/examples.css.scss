@@ -167,7 +167,7 @@ h1.badge.velocity:after {
 .spacer {
 	text-align: center;
 	min-height: 100px;
-	background-image: url(image_path("eample/example_bg_spacer_v.gif"));
+	background-image: url(image_path("exampleimg/example_bg_spacer_v.gif"));
 }
 .spacer.s0 {
 	min-height: 1px;
@@ -206,7 +206,7 @@ h1.badge.velocity:after {
 	min-height: 100%;
 }
 .horizontal .spacer {
-	background-image: url("../img/example_bg_spacer_h.gif");
+	background-image: url(image_path("exampleimg/example_bg_spacer_h.gif"));
 	margin-bottom: 0;
 	min-height: initial;
 	min-width: 100px;
@@ -1075,11 +1075,11 @@ color: white;
 }
 /*
 .demo#section-slides .panel, .demo#section-wipes .panel {
-	background-image: url("../img/example_bg_spacer_v.gif");
+	background-image: url(image_path("exampleimg/example_bg_spacer_v.gif"));
 }
 */
 .demo#section-wipes #pinContainer .turqoise, .demo#section-wipes #pinContainer .green, .demo#section-slides #slideContainer .panel {
-	background-image: url("../img/example_bg_spacer_h.gif");
+	background-image: url(image_path("exampleimg/example_bg_spacer_h.gif"));
 }
 /*
 .demo#section-slides .panel > b, .demo#section-wipes .panel > b {
