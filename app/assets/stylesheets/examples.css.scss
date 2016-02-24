@@ -129,7 +129,7 @@ section.demo.doublewidth, .spacer.doublewidth {
 .horizontal section.demo {
 	text-align: inherit;
 	white-space: nowrap;
-	background-image: url("../img/example_bg_h.png");
+	background-image: url(image_path('example_bg_h.png'));
 }
 .horizontal section.demo.fullwidth {
 	min-width: 100%;
@@ -913,17 +913,17 @@ a.viewsource:before {
 #parallaxContainer .layer1 {
 	height: 100%;
 	text-align: center;
-	background-image: url("../img/example_parallax_l1.gif");
+	background-image: url(image_path("example_parallax_l1.gif"));
 }
 #parallaxContainer .layer2 {
-	background-image: url("../img/example_parallax_l2.png");
+	background-image: url(image_path("example_parallax_l2.png"));
 	position: absolute;
 	height: 139px;
 	width: 100%;
 	bottom: 32px
 }
 #parallaxContainer .layer3 {
-	background-image: url("../img/example_parallax_l3.gif");
+	background-image: url(image_path('example_parallax_l3.gif'));
 	position: absolute;
 	height: 32px;
 	width: 100%;

@@ -344,13 +344,13 @@ section.green2 h2{
 		text-align: center;
 	position: relative;
 	max-width: 100%;
-	background-image: url("../img/mobg.png");
+	background-image: url(image_path('mobg.png'));
 }
 .green4 {
 	padding: 0 0 1000px 0;
 	position: relative;
 	max-width: 100%;
-	background-image: url("../img/transition.png");
+	background-image: url(image_path('transition.png'));
 }
 
 .pink2 {
