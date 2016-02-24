@@ -5,22 +5,25 @@
 #   gem 'sqlite3'
 #
 development:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  database: appname_development
-  pool: 5
-  username:
-  password:
+      adapter: postgresql
+      encoding: unicode
+      database: demo_test_development   
+      host: localhost
+      pool: 5
+      username:
+      password:
+      timeout: 5000
+
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  database: appname_test
-  pool: 5
-  username:
-  password:
+      adapter: postgresql
+      encoding: unicode
+      database: demo_test_development    
+      host: localhost
+      pool: 5
+      username:
+      password:
+      timeout: 5000
 
 production:
   adapter: postgresql
