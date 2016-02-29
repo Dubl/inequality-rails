@@ -396,10 +396,10 @@ var n = this,
 	<h3>Sign this e-petition to the presidential candidates:</h3>      
 	
 	<%= form_for @contact, url: {action: "create"}, html: {class:"nifty_form"} do |f| %>
-	<%= f.text_field :name %>   
-	<%= f.text_field :email %> 
-	<%= f.text_field :message %> 	
-	<%= f.submit "Send"%>       
+	<%= f.text_field :name, :placeholder => "Name" %>   
+	<%= f.text_field :email, :placeholder => "Email" %> 
+	<%= f.text_field :message, :placeholder => "Type your message"%>  
+	<%= f.submit 'Send', :class => 'button' %>     
 	<% end %>
 </section>
 
