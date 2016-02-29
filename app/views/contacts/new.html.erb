@@ -20,6 +20,7 @@
 
 </head>      
 <body>
+
 	<!--script type="text/javascript" src="js/plugins/debug.addIndicators.js"></script-->  
 		<section class="demo" id="section-wipes">
 			<style type="text/css">
@@ -54,6 +55,10 @@
 		</br>
 		</br>
 		<p>scroll down to find out</p>
+
+
+
+
          
 	</section>
 	<section class="growth">
@@ -170,14 +175,14 @@
 						<script>
 							// define images
 							var images3 = [
-								"img/graph12b.png",
-								"img/graph13.png",
-								"img/graph14.png",
-								"img/graph15.png",
-								"img/graph16.png",
-								"img/graph17.png",
-								"img/graph18.png",
-								"img/graph19.png",
+								"<%= asset_path "graph12b.png" %>",
+								"<%= asset_path "graph13.png"%>",
+								"<%= asset_path "graph14.png"%>",
+								"<%= asset_path "graph15.png"%>",
+								"<%= asset_path "graph16.png"%>",
+								"<%= asset_path "graph17.png"%>",
+								"<%= asset_path "graph18.png"%>",
+								"<%= asset_path "graph19.png"%>",
 
 							];
 
@@ -231,13 +236,13 @@
 						<script>
 							// define images
 							var images = [
-								"img/graph20.png",
-								"img/graph21.png",
-								"img/graph22.png",
-								"img/graph22.png",
-								"img/graph22.png",
-								"img/graph23.png",
-								"img/graph24.png",
+								"<%= asset_path "graph20.png"%>",
+								"<%= asset_path "graph21.png"%>",
+								"<%= asset_path "graph22.png"%>",
+								"<%= asset_path "graph22.png"%>",
+								"<%= asset_path "graph22.png"%>",
+								"<%= asset_path "graph23.png"%>",
+								"<%= asset_path "graph24.png"%>",
 
 							];
 
@@ -301,13 +306,13 @@
 <h1 >To find out...</h1>
 	<h1>Enter your net wealth:</h1>
 
-     	   <input id="firstbutton" class="input" type="text" name="q" id="field" placeholder="$5,000" autofocus>
+     	   <input id="firstbutton" class="input" type="text" name="q" id="field" placeholder="$5,000">
 	<h2>The assets of your household (stocks, savings, retirement, house) 
 minus your liabilities (student loans, credit card debt, mortgage). 
 A rough guess is fine.</h2>
 	<h1>Enter your income:</h1>
 
-     	   <input id="secondbutton" class="input" type="text" name="q" id="field" placeholder="$30,000" autofocus>
+     	   <input id="secondbutton" class="input" type="text" name="q" id="field" placeholder="$30,000">
 	<h2>How much money does your household make in a year before taxes? Include the incomes of everyone in the house who works. A rough guess is fine.</h2>
 
 	<a href="#firstfield_name" class="button">Claculate</a>
@@ -400,6 +405,7 @@ var n = this,
 
 </section>
 					<script>
+
 						$(function () { // wait for document ready
 							// init
 							var controller = new ScrollMagic.Controller({
