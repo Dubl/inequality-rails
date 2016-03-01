@@ -1,14 +1,15 @@
 class Contact < MailForm::Base      
   attribute :name,       :validate => true
-  attribute :email,      :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :other
   attribute :message
   attribute :attach_file, :attachment => true
 
   def headers
     {
-      :subject => "an inequality email",
+      :subject => "an inequality email", 
+      :email => "admin@zuriapps.com",
       :to => "admin@zuriapps.com",
-      :from => %("#{name}" <#{email}>)
+      :from => %("#{name}" <#{other}>)
     }
   end
   
