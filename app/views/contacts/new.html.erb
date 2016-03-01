@@ -393,7 +393,17 @@ var n = this,
 
 <section class="petition">
 	<h2>Get your money back!</h2> 
-	<h3>Sign this e-petition to the presidential candidates:</h3>      
+	<h3>Sign this e-petition to the presidential candidates:</h3> 
+	<div id ="letter">
+	<p>Dear Presidential Candidate,</p>     
+	<br>
+	<p>The 1% owe me $126,035.</p>
+	<p>I would like it back.</p>
+	<p>Please make that happen.</p>
+	<br>
+	<p>Sincerely,</p>
+	<p>Everyone on this list</p>
+	</div>
 	
 	<%= form_for @contact, url: {action: "create"}, html: {class:"nifty_form"} do |f| %>
 	<%= f.text_field :name, :placeholder => "Name" %>   
