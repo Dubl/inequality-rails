@@ -9,7 +9,7 @@ class Contact < MailForm::Base
       :subject => "an inequality email", 
       :email => "admin@zuriapps.com",
       :to => "admin@zuriapps.com",
-      :from => %("#{name}" <#{other}>)
+      :from => %("#{name}" <admin@zuriapps.com>)
     }
   end
   
