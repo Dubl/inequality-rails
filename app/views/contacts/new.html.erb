@@ -5,7 +5,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.inequality.cash/" />
 	<meta property="og:image" content="http://www.inequality.cash/assets/Owed.png" />
-	<meta property="og:description" content="Find out how much the 1% owe YOU" />     
+	<meta property="og:description" content="The 1% owe you over $100,000!" />     
 	<meta charset="utf-8"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=500" />
@@ -21,7 +21,17 @@
 
 
 	<!-- font -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 	<link href='https://fonts.googleapis.com/css?family=Dorsa' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.1.0/jssocials.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.1.0/jssocials.css" />
+
+	<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.1.0/jssocials-theme-flat.css" />
+
+
+
 
  	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -31,6 +41,7 @@
 
 	  ga('create', 'UA-74514713-1', 'auto');
 	  ga('send', 'pageview');
+
 
 	</script>
 
@@ -71,10 +82,6 @@
 		</br>
 		</br>
 		<p>scroll down to find out</p>
-
-
-
-
          
 	</section>
 	<section class="growth">
@@ -308,6 +315,7 @@
 
 <h1>So What?</h1>
 
+
 </section>
 
 
@@ -391,6 +399,7 @@ var n = this,
 
 
 <section class="panel pink2">
+
 	<h1 style="color:#fff">your wealth should be:</h1> 
 	  <h1 id="firstfield_name" style="color:#333"></h1>
 
@@ -398,13 +407,35 @@ var n = this,
 
 	  <h1 id="secondfield_name" style="color:#333"></h1>
 
+	  <!-- Modal HTML embedded directly into document -->
+  <div id="ex1" style="display:none;">
+    <p>This is a fairly straightforward calculation. 
+    In 1971 the 1% had 27% of the US's wealth and 8.7% of the US's income. In 2012 they had 41.8% of the wealth and 21.2% of the income. That means as the economy grew rather than sharing the growth, they kept more and more for themselvses. As a result, the 1%'s wealth has increased by 14.8% of the wealth and their income has increased by 12.6% since 1971. 
+ </p><p>
+    What if that increase in wealth and income had gone to the 99% and economic inequality had remained flat since 1971? In 2014 the total US wealth was $84 trillion and the total income paid out was $11.1 trillion. There are also 120,780,000 households (the 99%) in the US. If we multiply 14.8% by $84 trillion and $11.1 trillion by 12.6%, and then divide by the number of households, we get amount that should have gone to each household. Thus, each household would have $102,931 more in wealth and $11,552 more in income had the 1% not been quite so greedy. 
+    </p><p>
+    Note that this assumes an even distribution to everyone in the 99%. So in this calculation everyone, and everyone you know, gets the same increase. However, you could image other ways to distribute it. 
+    </p>
+    Also, don't worry about the 1%, they would still be crazy rich.    
+	</p><p>
+	Data source: <a href="http://gabriel-zucman.eu/uswealth/">http://gabriel-zucman.eu/uswealth/</a>
+	</p>
+  </div>
+
+  <!-- Link to open the modal -->
+  <p><a href="#ex1" rel="modal:open"><span style="color:#fff">How is this calculated?</span></a></p>
+  <br>
+
 	  <p style="color:#fff">keep scrolling</p> 
+
+
+
 </section>
 
 <section class="darkgreen"> 
 
 <h1 style="color:#fff">The 1% owe you:</h1>
-<h1 style="color:#93dd00; font-size:5em;">$126,035!!!<h1>
+<h1 style="color:#93dd00; font-size:5em;">$114,483!!!<h1>
 </section>
 
 
@@ -415,7 +446,7 @@ var n = this,
 	<div id ="letter">
 	<p>Dear Presidential Candidate,</p>     
 	<br>
-	<p>The 1% owe me $126,035.</p>
+	<p>The 1% owe me $114,483.</p>
 	<p>I would like it back.</p>
 	<p>Please make that happen.</p>
 	<br>
@@ -429,6 +460,19 @@ var n = this,
 	<%= f.text_field :message, :placeholder => "Type your message"%>  
 	<%= f.submit 'Send', :class => 'button' %>     
 	<% end %>
+
+	<div id="share"></div>
+    <script>
+		$("#share").jsSocials({
+		url: "http://inequality.cash",
+    	text: "How much does the 1% owe you?",
+		    showLabel: false,
+		    showCount: false,
+		    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
+		});
+    </script>
+
+
 </section>
 
 </section>
