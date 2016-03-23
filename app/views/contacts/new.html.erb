@@ -378,7 +378,7 @@ var n = this,
 
 	$(document).ready("#firstbutton").keyup(function(e){
 	e.preventDefault();
-	var x = Number(parseFloat($("#firstbutton.input").val().replace(/,/g, '')));     
+	var x = Number(parseFloat($("#firstbutton.input").val().replace(/,|\$/g, '')))||0;     
 	console.log(x);
 	y=(x+102931.00).formatMoney(0);
 	$("#firstfield_name").text("$"+y);
@@ -387,7 +387,7 @@ var n = this,
 
 	$(document).ready("#secondbutton").keyup(function(e){
 	e.preventDefault();
-	var x = Number(parseFloat($("#secondbutton.input").val().replace(/,/g, '')));     
+	var x = Number(parseFloat($("#secondbutton.input").val().replace(/,|\$/g, '')))||0;     
 	console.log(x);
 	y=(x+11552.16).formatMoney(0);
 	$("#secondfield_name").text("$"+y);
